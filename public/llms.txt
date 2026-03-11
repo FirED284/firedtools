@@ -1,0 +1,23 @@
+# FiredTools
+
+> Free, fast, client-side developer tools. No signup, no tracking, no data sent to servers.
+
+FiredTools is a collection of online utilities for developers and technical users. All tools run entirely in the browser using JavaScript — your data never leaves your device.
+
+## Site
+
+- URL: https://firedtools.vercel.app
+- License: Free to use
+
+## Tools
+
+- [JSON Formatter](https://firedtools.vercel.app/tools/json-formatter): Prettify, minify, and validate JSON data
+- [Base64 Encoder](https://firedtools.vercel.app/tools/base64-encoder): Encode and decode Base64 strings with Unicode support
+- [Regex Tester](https://firedtools.vercel.app/tools/regex-tester): Test regular expressions with real-time match highlighting
+- [URL Encoder](https://firedtools.vercel.app/tools/url-encoder): Encode and decode URLs and URL components
+- [Hash Generator](https://firedtools.vercel.app/tools/hash-generator): Generate MD5, SHA1, and SHA256 cryptographic hashes
+- [Color Converter](https://firedtools.vercel.app/tools/color-converter): Convert colors between HEX, RGB, and HSL formats
+- [Cron Generator](https://firedtools.vercel.app/tools/cron-generator): Build and understand cron expressions visually
+- [JWT Decoder](https://firedtools.vercel.app/tools/jwt-decoder): Decode and inspect JWT tokens, check expiration
+- [Markdown Preview](https://firedtools.vercel.app/tools/markdown-preview): Live markdown renderer with HTML export
+- [Diff Checker](https://firedtools.vercel.app/tools/diff-checker): Compare two text blocks line by line

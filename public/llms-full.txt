@@ -1,0 +1,176 @@
+# FiredTools — Full Tool Reference
+
+> Free, fast, client-side developer tools. No signup, no tracking, no data sent to servers.
+
+URL: https://firedtools.vercel.app
+
+All tools are 100% client-side. No backend, no accounts, no data collection. Built with Next.js 14, React, and Tailwind CSS.
+
+---
+
+## JSON Formatter & Validator
+
+URL: https://firedtools.vercel.app/tools/json-formatter
+
+Prettify or minify JSON data instantly in the browser. Validates syntax and shows descriptive error messages on invalid input. Supports selectable indentation: 2 spaces, 4 spaces, or tabs. Output can be copied to clipboard in one click. Useful for debugging API responses, config files, and data payloads.
+
+Features:
+- Prettify JSON with configurable indentation
+- Minify JSON by stripping all whitespace
+- Validate JSON and display error location
+- Copy output to clipboard
+- Supports large nested objects and arrays
+
+---
+
+## Base64 Encoder & Decoder
+
+URL: https://firedtools.vercel.app/tools/base64-encoder
+
+Encode plain text to Base64 or decode Base64 strings back to readable text. Handles full Unicode including emojis using TextEncoder/TextDecoder for proper UTF-8 handling. Base64 is commonly used for embedding binary data in JSON, HTML, CSS, and email.
+
+Features:
+- Encode text to Base64
+- Decode Base64 to plain text
+- Full Unicode and emoji support
+- Uses native browser btoa/atob with UTF-8 wrapper
+
+---
+
+## Regex Tester with Match Highlighting
+
+URL: https://firedtools.vercel.app/tools/regex-tester
+
+Test JavaScript regular expressions against a string with real-time match highlighting. Supports all standard regex flags: g (global), i (case-insensitive), m (multiline), s (dotAll). Named capture groups are supported. Matches are highlighted inline in orange for easy identification. Match count is displayed below the test string.
+
+Features:
+- Live match highlighting in the test string
+- Configurable regex flags (g, i, m, s)
+- Named capture group support
+- Match count display
+- Error reporting for invalid patterns
+- Uses JavaScript's native RegExp engine
+
+---
+
+## URL Encoder & Decoder
+
+URL: https://firedtools.vercel.app/tools/url-encoder
+
+Encode or decode URLs and URL components. Supports two modes: Component mode (encodeURIComponent) for encoding individual query parameter values, and Full URL mode (encodeURI) for encoding complete URLs while preserving structural characters like /, ?, and &.
+
+Features:
+- encodeURIComponent / decodeURIComponent (component mode)
+- encodeURI / decodeURI (full URL mode)
+- Toggle between encode and decode
+- Handles special characters, spaces, unicode
+
+---
+
+## Hash Generator — MD5, SHA1, SHA256
+
+URL: https://firedtools.vercel.app/tools/hash-generator
+
+Generate cryptographic hashes from any text input. SHA256 and SHA1 use the native Web Crypto API (window.crypto.subtle) for performance and accuracy. MD5 is implemented in pure JavaScript for compatibility. All three hashes are generated simultaneously from a single input.
+
+Features:
+- MD5 (pure JS implementation)
+- SHA1 (Web Crypto API)
+- SHA256 (Web Crypto API)
+- All hashes generated in parallel
+- Monospace hex output, easy to copy
+
+Note: MD5 and SHA1 are not secure for cryptographic purposes. Use SHA256 or higher for integrity checks.
+
+---
+
+## Color Converter — HEX, RGB, HSL
+
+URL: https://firedtools.vercel.app/tools/color-converter
+
+Convert colors between HEX, RGB, and HSL formats with a live visual preview. Includes a native browser color picker. RGB values are adjustable via sliders. HSL (Hue, Saturation, Lightness) is computed automatically. The color swatch and hex label update in real time.
+
+Features:
+- HEX input (3 or 6 digit, with or without #)
+- RGB sliders (0–255 per channel)
+- HSL output (auto-computed)
+- Native browser color picker
+- Live color preview swatch
+
+---
+
+## Cron Expression Generator
+
+URL: https://firedtools.vercel.app/tools/cron-generator
+
+Build and understand cron schedule expressions visually. Each of the 5 fields (minute, hour, day, month, weekday) has its own input. A human-readable description is generated in real time. Preset buttons for common schedules are included.
+
+Fields:
+- Minute (0–59)
+- Hour (0–23)
+- Day of month (1–31)
+- Month (1–12)
+- Day of week (0–7, 0 and 7 = Sunday)
+
+Presets:
+- Every minute: * * * * *
+- Every hour: 0 * * * *
+- Every day at midnight: 0 0 * * *
+- Every Monday at 9am: 0 9 * * 1
+- Every weekday at 8am: 0 8 * * 1-5
+- Every 15 minutes: */15 * * * *
+- First of month midnight: 0 0 1 * *
+
+---
+
+## JWT Decoder
+
+URL: https://firedtools.vercel.app/tools/jwt-decoder
+
+Decode and inspect JSON Web Tokens (JWT) without a secret key. Parses the three dot-separated parts: header (algorithm and token type), payload (claims), and signature. Automatically checks the `exp` claim to determine if the token is expired or still valid.
+
+Features:
+- Decodes header, payload, signature
+- Expiration check (exp claim vs current time)
+- Displays expired/valid status
+- Pretty-printed JSON output
+- No secret key required (decode only, not verify)
+
+JWT Structure:
+- Header: algorithm (alg) and token type (typ)
+- Payload: claims (sub, iat, exp, custom data)
+- Signature: base64url-encoded, cannot be verified client-side without the secret
+
+---
+
+## Markdown Preview — Live Renderer
+
+URL: https://firedtools.vercel.app/tools/markdown-preview
+
+Live side-by-side markdown editor and rendered preview. Supports headings, bold, italic, inline code, fenced code blocks, blockquotes, lists, links, and tables. HTML output tab lets you copy the rendered HTML for use in other projects.
+
+Features:
+- Live preview as you type
+- Headings (H1–H3)
+- Bold, italic, strikethrough
+- Inline code and fenced code blocks
+- Blockquotes
+- Unordered lists
+- Links
+- Tables
+- HTML export tab
+
+---
+
+## Diff Checker — Compare Two Texts
+
+URL: https://firedtools.vercel.app/tools/diff-checker
+
+Compare two text blocks and see which lines were added, removed, or unchanged. Displays a color-coded diff: red for removed lines, green for added lines, gray for identical lines. Shows counts of added, removed, and same lines. Works with code, prose, config files, JSON, and any plain text.
+
+Features:
+- Line-by-line comparison
+- Color-coded output (red = removed, green = added, gray = same)
+- Summary counts (added / removed / same)
+- Scrollable diff output for large files
+- No file size limit (browser memory dependent)
