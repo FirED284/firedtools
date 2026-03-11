@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: { default: 'FiredTools — Free Developer Tools', template: '%s | FiredTools' },
   description: 'Free online developer tools. JSON formatter, Base64 encoder, Regex tester, Hash generator and more.',
   openGraph: { type: 'website', siteName: 'FiredTools', locale: 'en_US' },
+  verification: { other: { 'msvalidate.01': 'D334637F7320918BF75090F0EC5DDA87' } },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
